@@ -1,0 +1,36 @@
+<div class="app-body" style="background-image: url(assets/images/images.jpg)">
+<div class="container">
+  <div class="row">
+     <div class="col-lg-4"></div>
+     <div class="col-lg-4">
+        <div class="col-lg-12 loginsection">
+           <h3 class="text-center"><img src="assets/images/Foreman.png" /> Foreman Login</h3>
+           <form #userform="ngForm" [formGroup]="loginForm" (ngSubmit)="onclick();">
+           <hr>
+           <div class="form-group">
+              <input type="text" id="uname" name="Username" formControlName="name" placeholder="Name*" [class]
+                 class="form-control" />
+              <p *ngIf="(loginForm.controls.name.invalid &&loginForm.controls.name.touched) || (loginForm.controls.name.invalid && loginForm.submitted)"
+                 class="text-danger">Name is Required</p>
+           </div>
+           <div class="form-group">
+              <input type="tel" id="pnum" name="Usermobilenumber" pattern="^\d{10}$" [class]
+                 formControlName="phone" placeholder="Mobile Number*" class="form-control" />
+              <p *ngIf="(loginForm.controls.phone.invalid &&loginForm.controls.phone.touched) || (loginForm.controls.phone.invalid && loginForm.submitted)"
+                 class="text-danger">Required 10 digit Phone Number</p>
+           </div>
+           <div class="form-group">
+              <input type="submit" routerLink="/register"
+                 *ngIf="(loginForm.controls.name.valid && loginForm.controls.phone.valid)"
+                 class="btn btn-success btn-block" value="Generate OTP"/>
+           </div>
+           <div class="form-group">
+              <router-outlet></router-outlet>
+           </div>
+           </form>
+        </div>
+     </div>
+     <div class="col-lg-4"></div>
+  </div>
+</div>
+</div>

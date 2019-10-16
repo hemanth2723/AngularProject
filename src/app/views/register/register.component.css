@@ -1,0 +1,19 @@
+.loginsection{
+    border: 1px solid grey;
+    background-color: rgb(188, 183, 183);
+    margin-top: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 14px 38px 0px rgba(114, 113, 113, 1);
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.form-control{
+    width: 100%;
+    margin: 10px 2px;
+    border-radius: 25px;
+}
+
+.btn{
+    border-radius: 25px;
+}

@@ -1,0 +1,19 @@
+<div class="app-body" style="background-image: url(assets/images/images.jpg)">
+    <div class="container">
+      <div class="row">
+         <div class="col-lg-4"></div>
+         <div class="col-lg-4">
+            <div class="col-lg-12 loginsection">
+               <h3 class="text-center"><img src="assets/images/Foreman.png" /> Foreman Login</h3>
+                <form>
+                    <label style="padding-top: 10px">Enter OTP:</label>
+                    <input type="text" id="otp" placeholder="6 digit number" class="form-control" maxlength="6">
+                    <button type="submit" class="btn btn-success btn-block" (click)="valuevalidator()">Submit</button>
+                    <router-outlet></router-outlet>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+     </div>
+   </div>
+</div>
